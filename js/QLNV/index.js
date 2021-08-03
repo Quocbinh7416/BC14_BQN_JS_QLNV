@@ -144,15 +144,10 @@ function xoaNhanVien(matkNV) {
 function chonNhanVien(matkNV) {
   var nhanVien = qlnv.chonNhanVien(matkNV);
   // hiện bảng
-  var myModal = document.getElementById("myModal");
-  myModal.style.display = "block";
-  myModal.classList.toggle("show");
-  // đóng bảng
-  document.getElementById("btnDong").addEventListener("click", closeTable);
-  function closeTable() {
-    myModal.style.display = "none";
-    myModal.classList.toggle("show");
-  }
+  // var myModal = document.getElementById("myModal");
+  // myModal.style.display = "block";
+  // myModal.classList.toggle("show");
+  $("#myModal").modal("show");
   // disable input tai khoan nhan vien
   document.getElementById("tknv").disabled = true;
 
